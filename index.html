@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MediConnect - Modern Healthcare Appointment Booking System. Seamlessly book consultations with top specialists, manage appointments, and access digital receipts.">
+  <meta name="keywords" content="doctor appointment, healthcare booking, hospital consultation, medical schedule">
+  <title>MediConnect | Healthcare Appointment Booking System</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Sticky Navigation Bar
+       ========================================================================== -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" aria-label="MediConnect Homepage">
+        <div class="brand-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2v20M2 12h20"/>
+          </svg>
+        </div>
+        <span>Medi<span>Connect</span></span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#specializations" class="nav-link">Specialties</a></li>
+          <li><a href="#doctors" class="nav-link">Doctors</a></li>
+          <li><a href="#booking" class="nav-link">Book Visit</a></li>
+          <li><a href="#appointments" class="nav-link">My Bookings</a></li>
+          <li><a href="#patient-profile" class="nav-link">Patient Profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#booking" class="btn btn-primary btn-sm">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Instant Booking
+        </a>
+        <button class="nav-toggle-btn" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            Real-Time Healthcare Scheduling Platform
+          </div>
+          <h1 class="hero-title">
+            Your Health, Scheduled <span>Seamlessly</span> & Instantly.
+          </h1>
+          <p class="hero-lead">
+            Connect with board-certified physicians, view real-time time slots, book in-person or video consultations, and effortlessly manage all medical appointments.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#doctors" class="btn btn-primary btn-lg">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              Find a Doctor
+            </a>
+            <a href="#appointments" class="btn btn-secondary btn-lg">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+              </svg>
+              View Booked Visits
+            </a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="hero-stat-item">
+              <strong>98.5%</strong>
+              <span>Patient Satisfaction</span>
+            </div>
+            <div class="hero-stat-item">
+              <strong>15+</strong>
+              <span>Top Clinical Specialties</span>
+            </div>
+            <div class="hero-stat-item">
+              <strong>24/7</strong>
+              <span>Instant Digital Receipts</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <div class="hero-card-header">
+              <h3>Featured Specialist</h3>
+              <span class="live-badge">&#9679; Available Today</span>
+            </div>
+
+            <div class="doctor-preview-compact">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200" alt="Dr. Sarah Jenkins" class="preview-avatar">
+              <div class="preview-info">
+                <h4>Dr. Sarah Jenkins</h4>
+                <p>Cardiology - MD, FACC</p>
+                <div class="preview-rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9 (238 reviews)</div>
+              </div>
+            </div>
+
+            <div class="doctor-preview-compact">
+              <img src="https://images.unsplash.com/photo-1594824813589-9833777596c3?auto=format&fit=crop&q=80&w=200" alt="Dr. Priya Patel" class="preview-avatar">
+              <div class="preview-info">
+                <h4>Dr. Priya Patel</h4>
+                <p>Pediatrics - MD, FAAP</p>
+                <div class="preview-rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9 (312 reviews)</div>
+              </div>
+            </div>
+
+            <div class="floating-pill floating-pill-left">
+              <div class="pill-icon">&#10004;</div>
+              <div class="pill-text">
+                <strong>Instant Booking Confirmation</strong>
+                <span>With QR Digital Slip & SMS Alerts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Doctor Specializations Section
+         ========================================================================== -->
+    <section class="section" id="specializations">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Clinical Departments</span>
+          <h2 class="section-title">Explore by Medical Specialization</h2>
+          <p class="section-subtitle">
+            Find the right medical care for your needs across our specialized clinics and hospital departments.
+          </p>
+        </div>
+
+        <div class="specializations-grid" id="specializations-grid">
+          <!-- Populated dynamically via js/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Doctors Listing Section
+         ========================================================================== -->
+    <section class="section doctors-section" id="doctors">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Our Physicians</span>
+          <h2 class="section-title">Verified Healthcare Specialists</h2>
+          <p class="section-subtitle">
+            Browse qualified physicians, check available days, read verified ratings, and schedule your consultation.
+          </p>
+        </div>
+
+        <!-- Filter & Search Toolbar -->
+        <div class="filter-bar">
+          <div class="filter-top-row">
+            <div class="search-box">
+              <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input type="text" id="doctor-search" class="search-input" placeholder="Search by doctor name, specialty, hospital, or language..." aria-label="Search doctors">
+            </div>
+
+            <div class="sort-group">
+              <label for="sort-doctors">Sort by:</label>
+              <select id="sort-doctors" class="sort-select">
+                <option value="recommended">Recommended & Experience</option>
+                <option value="rating-high">Highest Rated</option>
+                <option value="experience-high">Most Experienced</option>
+                <option value="fee-low">Consultation Fee: Low to High</option>
+                <option value="fee-high">Consultation Fee: High to Low</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Specialization Filter Pills -->
+          <div class="filter-pills-row" id="specialization-filters">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- Doctors Grid -->
+        <div class="doctors-grid" id="doctors-grid">
+          <!-- Rendered dynamically via js/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Appointment Booking Section & Patient Registration
+         ========================================================================== -->
+    <section class="section booking-section" id="booking">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Schedule Consultation</span>
+          <h2 class="section-title">Book Your Appointment</h2>
+          <p class="section-subtitle">
+            Complete the patient form below, select an available date and time slot, and receive instant confirmation.
+          </p>
+        </div>
+
+        <div class="booking-layout">
+          <!-- Main Booking Form -->
+          <div class="booking-card">
+            <div class="booking-card-header">
+              <div>
+                <h3>Appointment Request Form</h3>
+                <p class="text-muted">Fields marked with <span class="text-primary">*</span> are mandatory</p>
+              </div>
+              <button type="button" class="btn btn-outline-primary btn-sm" id="use-saved-profile-btn">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+                Autofill Saved Profile
+              </button>
+            </div>
+
+            <form id="appointment-booking-form" novalidate>
+              <!-- Step 1: Doctor & Mode -->
+              <div class="form-step-title">
+                <span class="form-step-num">1</span>
+                <span>Select Specialist & Consultation Mode</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="booking-doctor">Select Doctor / Specialist <span class="req">*</span></label>
+                <select id="booking-doctor" class="form-control" required>
+                  <!-- Populated dynamically -->
+                </select>
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Consultation Mode <span class="req">*</span></label>
+                <div class="radio-mode-group">
+                  <label class="radio-mode-card">
+                    <input type="radio" name="consultation-type" value="In-Person" checked>
+                    <div>
+                      <strong>In-Person Clinic Visit</strong>
+                      <p class="text-muted" style="font-size: 0.75rem;">Meet at hospital / specialist clinic suite</p>
+                    </div>
+                  </label>
+                  <label class="radio-mode-card">
+                    <input type="radio" name="consultation-type" value="Video Consultation">
+                    <div>
+                      <strong>Video Telehealth</strong>
+                      <p class="text-muted" style="font-size: 0.75rem;">Secure HD encrypted video consultation</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Step 2: Date & Time Slot -->
+              <div class="form-step-title">
+                <span class="form-step-num">2</span>
+                <span>Choose Preferred Date & Available Time Slot</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="booking-date">Appointment Date <span class="req">*</span></label>
+                <input type="date" id="booking-date" class="form-control" required>
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Available Time Slots <span class="req">*</span></label>
+                <div class="time-slots-container" id="time-slots-container">
+                  <!-- Slots populated dynamically -->
+                </div>
+              </div>
+
+              <!-- Step 3: Patient Registration & Contact Details -->
+              <div class="form-step-title">
+                <span class="form-step-num">3</span>
+                <span>Patient Registration Details</span>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="patient-name">Patient Full Name <span class="req">*</span></label>
+                  <input type="text" id="patient-name" class="form-control" placeholder="e.g., Robert Martinez" required>
+                  <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="patient-email">Email Address <span class="req">*</span></label>
+                  <input type="email" id="patient-email" class="form-control" placeholder="e.g., robert.m@example.com" required>
+                  <div class="invalid-feedback"></div>
+                </div>
+              </div>
+
+              <div class="form-grid-3">
+                <div class="form-group">
+                  <label class="form-label" for="patient-phone">Phone Number <span class="req">*</span></label>
+                  <input type="tel" id="patient-phone" class="form-control" placeholder="e.g., (555) 819-2034" required>
+                  <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="patient-age">Age (Years) <span class="req">*</span></label>
+                  <input type="number" id="patient-age" class="form-control" min="0" max="120" placeholder="e.g., 45" required>
+                  <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="patient-gender">Gender <span class="req">*</span></label>
+                  <select id="patient-gender" class="form-control" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Non-Binary">Non-Binary</option>
+                    <option value="Prefer not to say">Prefer not to say</option>
+                  </select>
+                  <div class="invalid-feedback"></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="patient-blood-group">Blood Group (Optional)</label>
+                <select id="patient-blood-group" class="form-control">
+                  <option value="">Select Blood Group (Optional)</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="patient-symptoms">Reason for Visit / Symptoms <span class="req">*</span></label>
+                <textarea id="patient-symptoms" class="form-control" rows="3" placeholder="Briefly describe your symptoms, medical concerns, or consultation reason..." required></textarea>
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <div class="form-group" style="display: flex; align-items: center; gap: 0.65rem;">
+                <input type="checkbox" id="save-profile-checkbox" style="width: 1.1rem; height: 1.1rem; accent-color: var(--primary);" checked>
+                <label for="save-profile-checkbox" style="font-size: 0.875rem; color: var(--slate-700); cursor: pointer;">
+                  Save this patient profile in local browser storage for faster future bookings
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Confirm & Book Appointment
+              </button>
+            </form>
+          </div>
+
+          <!-- Summary Sidebar -->
+          <aside class="booking-summary-sidebar">
+            <div class="summary-card">
+              <div class="summary-header">
+                <h3>Consultation Summary</h3>
+                <p>Transparent fee structure & policy</p>
+              </div>
+
+              <div class="summary-body">
+                <div class="summary-line-item">
+                  <span>Selected Specialist:</span>
+                  <span class="summary-doctor-title" id="summary-doctor-name">Dr. Sarah Jenkins</span>
+                </div>
+
+                <div class="summary-line-item">
+                  <span>Physician Consultation Fee:</span>
+                  <strong id="summary-doctor-fee">$120.00</strong>
+                </div>
+
+                <div class="summary-line-item">
+                  <span>Platform & Hospital Service Fee:</span>
+                  <span>$5.00</span>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-total">
+                  <span>Estimated Total:</span>
+                  <span class="text-primary" id="summary-total-fee">$125.00</span>
+                </div>
+
+                <div class="summary-guarantee">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                  <span>Free cancellation up to 4 hours before the appointment.</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Appointments Management Dashboard
+         ========================================================================== -->
+    <section class="section appointments-section" id="appointments">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Records & Schedules</span>
+          <h2 class="section-title">Booked Appointments Dashboard</h2>
+          <p class="section-subtitle">
+            Manage your booked visits, review digital appointment slips, reschedule consultation times, or cancel bookings.
+          </p>
+        </div>
+
+        <!-- Metric Statistics Cards -->
+        <div class="dashboard-stats-grid">
+          <div class="stat-card">
+            <div class="stat-card-icon stat-icon-blue">&#128197;</div>
+            <div class="stat-card-content">
+              <h4 id="stat-total">0</h4>
+              <span>Total Bookings</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-icon stat-icon-emerald">&#9200;</div>
+            <div class="stat-card-content">
+              <h4 id="stat-upcoming">0</h4>
+              <span>Upcoming Visits</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-icon stat-icon-amber">&#10003;</div>
+            <div class="stat-card-content">
+              <h4 id="stat-completed">0</h4>
+              <span>Completed Visits</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-icon stat-icon-rose">&#10006;</div>
+            <div class="stat-card-content">
+              <h4 id="stat-cancelled">0</h4>
+              <span>Cancelled Visits</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard Filter and Search Controls -->
+        <div class="dashboard-controls">
+          <div class="tabs-group" role="tablist">
+            <button class="tab-btn active" data-tab="all" role="tab">All Bookings</button>
+            <button class="tab-btn" data-tab="upcoming" role="tab">Upcoming</button>
+            <button class="tab-btn" data-tab="completed" role="tab">Completed</button>
+            <button class="tab-btn" data-tab="cancelled" role="tab">Cancelled</button>
+          </div>
+
+          <div class="search-box" style="max-width: 340px;">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" id="appointment-search" class="search-input" placeholder="Search by patient, doctor, or ID..." aria-label="Search appointments">
+          </div>
+        </div>
+
+        <!-- Appointments List -->
+        <div id="appointments-list">
+          <!-- Populated dynamically via js/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Patient Profile Management Section
+         ========================================================================== -->
+    <section class="section profile-section" id="patient-profile">
+      <div class="container">
+        <div class="profile-card">
+          <div class="profile-header">
+            <div class="profile-avatar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <div>
+              <h2>Patient Registration Profile</h2>
+              <p class="text-muted">Manage your personal health record and contact details stored safely in your browser.</p>
+            </div>
+          </div>
+
+          <form id="patient-profile-form" novalidate>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="profile-name">Full Name <span class="req">*</span></label>
+                <input type="text" id="profile-name" class="form-control" required>
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="profile-email">Email Address <span class="req">*</span></label>
+                <input type="email" id="profile-email" class="form-control" required>
+                <div class="invalid-feedback"></div>
+              </div>
+            </div>
+
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label class="form-label" for="profile-phone">Phone Number <span class="req">*</span></label>
+                <input type="tel" id="profile-phone" class="form-control" required>
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="profile-age">Age <span class="req">*</span></label>
+                <input type="number" id="profile-age" class="form-control" min="0" max="120" required>
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="profile-gender">Gender</label>
+                <select id="profile-gender" class="form-control">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Non-Binary">Non-Binary</option>
+                  <option value="Prefer not to say">Prefer not to say</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="profile-blood-group">Blood Group</label>
+                <select id="profile-blood-group" class="form-control">
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="profile-address">Home Address / City</label>
+                <input type="text" id="profile-address" class="form-control" placeholder="City, State / ZIP">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="profile-history">Known Medical History / Allergies</label>
+              <textarea id="profile-history" class="form-control" rows="2" placeholder="e.g., Penicillin allergy, asthma, hypertension..."></textarea>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 1rem;">
+              <button type="submit" class="btn btn-primary">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                  <polyline points="17 21 17 13 7 13 7 21"/>
+                  <polyline points="7 3 7 8 15 8"/>
+                </svg>
+                Save Patient Profile
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Modals
+       ========================================================================== -->
+  <!-- 1. Doctor Details Modal -->
+  <div class="modal" id="doctor-details-modal" role="dialog" aria-modal="true" aria-labelledby="modal-doc-title">
+    <div class="modal-dialog modal-dialog-lg">
+      <div class="modal-header">
+        <h3 id="modal-doc-title">Physician Profile</h3>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Appointment Confirmation / Digital Slip Modal -->
+  <div class="modal" id="confirmation-modal" role="dialog" aria-modal="true" aria-labelledby="modal-conf-title">
+    <div class="modal-dialog modal-dialog-lg">
+      <div class="modal-header">
+        <h3 id="modal-conf-title">Appointment Confirmation</h3>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Reschedule Modal -->
+  <div class="modal" id="reschedule-modal" role="dialog" aria-modal="true" aria-labelledby="modal-resched-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-resched-title">Reschedule Consultation</h3>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Cancel Modal -->
+  <div class="modal" id="cancel-modal" role="dialog" aria-modal="true" aria-labelledby="modal-cancel-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-cancel-title">Cancel Appointment</h3>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo">
+            <div class="brand-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 2v20M2 12h20"/>
+              </svg>
+            </div>
+            <span>Medi<span>Connect</span></span>
+          </a>
+          <p>
+            MediConnect is an enterprise-grade digital healthcare appointment scheduling platform designed for clinics, medical centers, and patients. Built with clean vanilla web standards.
+          </p>
+          <div class="emergency-helpline-box">
+            <strong>Medical Emergency? Call 24/7 Helpline:</strong>
+            <a href="tel:911">911 / 1-800-MEDICARE</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Clinical Specialties</h4>
+          <ul class="footer-links">
+            <li><a href="#doctors" onclick="App.filterBySpecialization('cardiology')">Cardiology</a></li>
+            <li><a href="#doctors" onclick="App.filterBySpecialization('dermatology')">Dermatology</a></li>
+            <li><a href="#doctors" onclick="App.filterBySpecialization('pediatrics')">Pediatrics</a></li>
+            <li><a href="#doctors" onclick="App.filterBySpecialization('neurology')">Neurology</a></li>
+            <li><a href="#doctors" onclick="App.filterBySpecialization('orthopedics')">Orthopedics</a></li>
+            <li><a href="#doctors" onclick="App.filterBySpecialization('general-medicine')">General Medicine</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#doctors">Find Doctors</a></li>
+            <li><a href="#booking">Book Appointment</a></li>
+            <li><a href="#appointments">Appointments Dashboard</a></li>
+            <li><a href="#patient-profile">Patient Health Profile</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Internship Demo Tools</h4>
+          <p style="font-size: 0.85rem; color: var(--slate-400); margin-bottom: 0.75rem;">
+            You can reset the sample appointments and doctors to initial default state at any time:
+          </p>
+          <button class="btn btn-outline-danger btn-sm" id="reset-demo-btn">
+            &#8634; Reset Demo Data
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 MediConnect Healthcare System. Virtual Internship Project. All rights reserved.</p>
+        <p>Built with Semantic HTML5, CSS3, & Vanilla JavaScript (No external frameworks).</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
